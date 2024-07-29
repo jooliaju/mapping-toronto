@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 
-mapboxgl.accessToken = process.env.MB_TOKEN;
+mapboxgl.accessToken = process.env.REACT_APP_MB_TOKEN;
 
 export default function App() {
     const mapContainer = useRef(null);
@@ -9,7 +9,7 @@ export default function App() {
     const [lng, setLng] = useState(-70.9);
     const [lat, setLat] = useState(42.35);
     const [zoom, setZoom] = useState(9);
-
+    
     useEffect(() => {
         if (map.current) return; // initialize map only once
         map.current = new mapboxgl.Map({
