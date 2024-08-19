@@ -1,0 +1,22 @@
+# Activate conda env using:
+  # conda env create -f map.yaml
+  # conda activate map
+
+# Update environment using:
+  # conda env update --file map.yaml --prune
+
+name: map
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+# R packages
+  - r-base=4.3.1
+  - r-tidyverse
+# Python packages
+  - python=3.12.5
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - geopandas
